@@ -1,0 +1,16 @@
+{
+  "projectName": "games",
+  "mode": "file-router",
+  "typescript": true,
+  "packageManager": "bun",
+  "includeExamples": false,
+  "tailwind": true,
+  "addOnOptions": {},
+  "envVarValues": {},
+  "git": false,
+  "install": true,
+  "routerOnly": false,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": ["cloudflare", "sentry", "ai", "compiler", "form", "tanstack-query", "store"]
+}

@@ -1,0 +1,21 @@
+pre-commit:
+  parallel: false
+  commands:
+    lint-staged:
+      glob: '*.{ts,js,jsx,tsx,css}'
+      run: bunx oxlint --fix {staged_files} && bunx oxfmt --write {staged_files} && git add {staged_files}
+
+commit-msg:
+  commands:
+    auto-emoji-branch:
+      run: |
+        emoji=$(git config user.emoji || echo "🪐")
+        branch=$(git symbolic-ref --short HEAD)
+        message=$(cat "{1}")
+
+        if echo "$message" | (! grep -q "^${branch} ${emoji}*") && \
+           echo "$message" | (! grep -q "^Merge branch*") && \
+           echo "$message" | (! grep -q "^Merge remote-tracking branch*"); \
+        then
+           echo "$branch $emoji $message" > "{1}"
+        fi
