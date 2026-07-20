@@ -4,6 +4,7 @@ import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/reac
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 
 import appCss from '../globals.css?url'
+import { Footer, Header } from './-components/layout'
 
 import type { QueryClient } from '@tanstack/react-query'
 
@@ -42,14 +43,19 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {children}
-
-        <TanStackDevtools
-          plugins={[
-            { name: 'TanStack Query', render: <ReactQueryDevtoolsPanel /> },
-            { name: 'TanStack Router', render: <TanStackRouterDevtoolsPanel /> },
-          ]}
-        />
+        <div className="mx-auto max-w-7xl p-4 py-12">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+        {import.meta.env.DEV && (
+          <TanStackDevtools
+            plugins={[
+              { name: 'TanStack Query', render: <ReactQueryDevtoolsPanel /> },
+              { name: 'TanStack Router', render: <TanStackRouterDevtoolsPanel /> },
+            ]}
+          />
+        )}
         <Scripts />
       </body>
     </html>
