@@ -1,0 +1,1 @@
+export { otpsControllerCreateOtp } from './otpsControllerCreateOtp'
