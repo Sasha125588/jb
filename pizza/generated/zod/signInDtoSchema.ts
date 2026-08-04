@@ -6,6 +6,6 @@
 import * as z from 'zod'
 
 export const signInDtoSchema = z.object({
-  phone: z.string().describe('Номер телефона').meta({ examples: ['89990009999'] }),
-  code: z.number().describe('Отп код'),
+  phone: z.string().min(1, 'error.validation.required').max(11, 'error.validation.tooLong').length(11, "error.validation.length").describe('Номер телефона').meta({ examples: ['89990009999'] }),
+  code: z.number().min(1, 'error.validation.min').describe('Отп код'),
 })

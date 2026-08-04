@@ -1,0 +1,2 @@
+export type { GetProfileOptions, GetProfileResponses, GetProfileStatus200 } from './GetProfile'
+export type { UpdateProfileBody, UpdateProfileOptions, UpdateProfileResponses, UpdateProfileStatus200 } from './UpdateProfile'

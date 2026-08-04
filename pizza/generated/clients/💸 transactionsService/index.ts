@@ -1,3 +1,3 @@
-export { transactionsControllerGetTransaction } from './transactionsControllerGetTransaction'
-export { transactionsControllerPayTransaction } from './transactionsControllerPayTransaction'
-export { transactionsControllerPayTransactionByQr } from './transactionsControllerPayTransactionByQr'
+export { getTransaction } from './getTransaction'
+export { payTransaction } from './payTransaction'
+export { payTransactionByQr } from './payTransactionByQr'

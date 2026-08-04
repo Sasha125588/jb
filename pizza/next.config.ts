@@ -1,3 +1,5 @@
+import createNextIntlPlugin from 'next-intl/plugin'
+
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
@@ -6,6 +8,13 @@ const nextConfig: NextConfig = {
     useTypeScriptCli: true,
   },
   reactCompiler: true,
+  cacheComponents: true,
 }
 
-export default nextConfig
+const withNextIntl = createNextIntlPlugin({
+  requestConfig: './src/lib/i18n/request.ts',
+  experimental: {
+    createMessagesDeclaration: './locales/en.json',
+  },
+})
+export default withNextIntl(nextConfig)

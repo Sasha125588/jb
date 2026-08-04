@@ -1,0 +1,1 @@
+export type { CreateOtpBody, CreateOtpOptions, CreateOtpResponses, CreateOtpStatus200 } from './CreateOtp'

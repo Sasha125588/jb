@@ -1,0 +1,43 @@
+{
+  "brand.pizzeria": "Піцерія",
+  "menu": "Меню",
+  "products.pizzas": "Піци",
+  "products.breakfasts": "Сніданки",
+  "products.wings": "Крильця",
+  "products.milkshakes": "Мілкшейки",
+  "contacts.title": "Зв'язатися з нами",
+  "contacts.support": "Підтримка клієнтів",
+  "contacts.email": "Напишіть нам на пошту",
+  "contacts.feedback": "Зворотній зв'язок",
+  "contacts.info": "Контакти",
+  "github.link": "Посилання на GitHub",
+  "policy.privacy": "Політика конфіденційності",
+  "policy.terms": "Умови використання",
+
+  "button.retryOtp": "Надіслати код повторно",
+  "page.login.otp.retryCountdown": "{seconds, plural, one {Надіслати код повторно через # секунду} few {Надіслати код повторно через # секунди} many {Надіслати код повторно через # секунд} other {Надіслати код повторно через # секунди}}",
+
+  "page.login.phone.title": "Авторизація",
+  "page.login.phone.description": "Введіть номер телефону для входу у свій профіль",
+  "page.login.code.title": "Код підтвердження",
+  "page.login.code.description": "На вказаний вами номер було надіслано код підтвердження",
+
+  "button.submitPhone": "Продовжити",
+  "button.login": "Увійти",
+  "button.logout": "Вийти",
+  "button.cancel": "Скасувати",
+
+  "loading": "Завантаження",
+
+  "modal.logout.title": "Ви впевнені, що хочете вийти з профілю?",
+
+  "error.validation.required": "Поле обов’язкове",
+  "error.validation.length": "Заповніть поле повністю",
+  "error.validation.tooLong": "Значення занадто довге",
+  "error.validation.min": "Значення занадто мале",
+  "error.invalidCode": "Неправильный отп код",
+  "error.default": "Щось пішло не так",
+
+  "field.login.phone.label": "Телефон",
+  "field.login.code.label": "Код підтвердження"
+}

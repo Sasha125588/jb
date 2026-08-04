@@ -1,0 +1,43 @@
+{
+  "brand.pizzeria": "Пиццерия",
+  "menu": "Меню",
+  "products.pizzas": "Пиццы",
+  "products.breakfasts": "Завтраки",
+  "products.wings": "Крылышки",
+  "products.milkshakes": "Милкшейки",
+  "contacts.title": "Связаться с нами",
+  "contacts.support": "Поддержка клиентов",
+  "contacts.email": "Напишите нам на почту",
+  "contacts.feedback": "Обратная связь",
+  "contacts.info": "Контакты",
+  "github.link": "Ссылка на GitHub",
+  "policy.privacy": "Политика конфиденциальности",
+  "policy.terms": "Пользовательское соглашение",
+
+  "button.retryOtp": "Отправить код повторно",
+  "page.login.otp.retryCountdown": "{seconds, plural, one {Отправить код повторно через # секунду} few {Отправить код повторно через # секунды} many {Отправить код повторно через # секунд} other {Отправить код повторно через # секунды}}",
+
+  "page.login.phone.title": "Авторизация",
+  "page.login.phone.description": "Введите номер телефона для входа в свой профиль",
+  "page.login.code.title": "Проверочный код",
+  "page.login.code.description": "На указанный вами номер был отправлен проверочный код",
+
+  "button.submitPhone": "Продолжить",
+  "button.login": "Войти",
+  "button.logout": "Выйти",
+  "button.cancel": "Отменить",
+
+  "loading": "Загрузка",
+
+  "modal.logout.title": "Вы уверены, что хотите выйти из профиля?",
+
+  "error.validation.required": "Поле обязательно",
+  "error.validation.length": "Заполните поле полностью",
+  "error.validation.tooLong": "Значение слишком длинное",
+  "error.validation.min": "Значение слишком мало",
+  "error.invalidCode": "Неправильный отп код",
+  "error.default": "Что-то пошло не так",
+
+  "field.login.phone.label": "Телефон",
+  "field.login.code.label": "Проверочный код"
+}

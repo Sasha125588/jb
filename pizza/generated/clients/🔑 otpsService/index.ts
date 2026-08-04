@@ -1,1 +1,1 @@
-export { otpsControllerCreateOtp } from './otpsControllerCreateOtp'
+export { createOtp } from './createOtp'

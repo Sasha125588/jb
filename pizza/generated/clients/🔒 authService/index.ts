@@ -1,2 +1,2 @@
-export { authControllerSignIn } from './authControllerSignIn'
-export { authControllerSignOut } from './authControllerSignOut'
+export { signIn } from './signIn'
+export { signOut } from './signOut'

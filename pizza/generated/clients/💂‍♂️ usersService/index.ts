@@ -1,2 +1,2 @@
-export { usersControllerGetProfile } from './usersControllerGetProfile'
-export { usersControllerUpdateProfile } from './usersControllerUpdateProfile'
+export { getProfile } from './getProfile'
+export { updateProfile } from './updateProfile'

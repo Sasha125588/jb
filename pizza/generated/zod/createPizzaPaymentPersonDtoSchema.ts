@@ -6,5 +6,5 @@
 import * as z from 'zod'
 
 export const createPizzaPaymentPersonDtoSchema = z.object({
-  phone: z.string().describe('Телефон').meta({ examples: ['89990009999'] }),
+  phone: z.string().min(1, 'error.validation.required').max(11, 'error.validation.tooLong').length(11, "error.validation.length").describe('Телефон').meta({ examples: ['89990009999'] }),
 })

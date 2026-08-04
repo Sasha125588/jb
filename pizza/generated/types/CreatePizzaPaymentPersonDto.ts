@@ -6,6 +6,8 @@
 export type CreatePizzaPaymentPersonDto = {
     /**
      * @description Телефон
+     * @minLength 1
+     * @maxLength 11
      * @example 89990009999
      * @type string
     */

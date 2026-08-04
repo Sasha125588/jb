@@ -6,12 +6,15 @@
 export type SignInDto = {
     /**
      * @description Номер телефона
+     * @minLength 1
+     * @maxLength 11
      * @example 89990009999
      * @type string
     */
     phone: string;
     /**
      * @description Отп код
+     * @minLength 1
      * @type number
     */
     code: number;

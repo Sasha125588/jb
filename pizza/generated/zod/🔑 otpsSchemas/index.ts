@@ -1,0 +1,1 @@
+export { createOtpBodySchema, createOtpStatus200Schema, createOtpSuccessResponseSchema } from './createOtpSchema'

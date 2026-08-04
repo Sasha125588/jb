@@ -1,0 +1,2 @@
+export { getProfileStatus200Schema, getProfileSuccessResponseSchema } from './getProfileSchema'
+export { updateProfileBodySchema, updateProfileStatus200Schema, updateProfileSuccessResponseSchema } from './updateProfileSchema'
