@@ -2,7 +2,7 @@ pre-commit:
   parallel: false
   commands:
     lint-staged:
-      root: "pizza/"
+      root: 'pizza/'
       glob: '*.{ts,js,jsx,tsx,css}'
       run: bunx oxlint --fix {staged_files} && bunx oxfmt --write {staged_files} && git add {staged_files}
 

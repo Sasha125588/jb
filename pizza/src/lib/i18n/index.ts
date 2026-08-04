@@ -1,4 +1,5 @@
 export * from './helpers'
 export * from './navigation'
+export * from './routing'
 export * from './types'
 export * from './i18n-text'
