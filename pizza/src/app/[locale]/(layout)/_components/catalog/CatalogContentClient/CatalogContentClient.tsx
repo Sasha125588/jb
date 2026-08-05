@@ -3,13 +3,12 @@
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { Suspense } from 'react'
 
-import { ALL_CATALOG_VIEWS } from '../CatalogViews/constants'
 import { AllCatalogContent, AllCatalogContentSkeleton } from './components'
 import { PizzaCard, PizzaCardSkeleton } from './components/PizzaCard/PizzaCard'
 import { useCatalogContentClient } from './hooks/useCatalogContentClient'
 import { getPizzaCatalogQueryOptions } from '@/generated/hooks'
 
-const CATALOG_SKELETON_CARD_COUNT = 8
+import type { CatalogView } from '../CatalogViews/constants'
 
 export const CatalogContentClient = () => {
   const { state } = useCatalogContentClient()
@@ -22,7 +21,7 @@ export const CatalogContentClient = () => {
 }
 
 interface CatalogContentQueryProps {
-  activeView: (typeof ALL_CATALOG_VIEWS)[number]
+  activeView: CatalogView
 }
 
 const CatalogContentQuery = ({ activeView }: CatalogContentQueryProps) => {
@@ -45,6 +44,8 @@ const CatalogContentQuery = ({ activeView }: CatalogContentQueryProps) => {
     </div>
   )
 }
+
+const CATALOG_SKELETON_CARD_COUNT = 8
 
 export const CatalogContentClientSkeleton = ({ activeView }: CatalogContentQueryProps) => {
   if (activeView === 'all') return <AllCatalogContentSkeleton />

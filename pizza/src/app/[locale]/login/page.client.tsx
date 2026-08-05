@@ -21,7 +21,10 @@ export const LoginPageClient = () => {
   const { state, form, masks, functions } = useLoginPage()
 
   return (
-    <section className="min-h-full px-4 sm:grid sm:place-items-center sm:px-6">
+    <section
+      className="min-h-full px-4 sm:grid sm:place-items-center sm:px-6"
+      data-testid="login-shell"
+    >
       <div className="flex w-full flex-col sm:max-w-85 sm:gap-12">
         <Typography
           as="span"

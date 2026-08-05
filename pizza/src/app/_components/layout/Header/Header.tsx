@@ -12,7 +12,10 @@ import { Link } from '@/lib/i18n'
 
 export const Header = () => (
   <header className="flex h-16 items-center justify-between px-4">
-    <Link href="/">
+    <Link
+      href="/"
+      data-testid="home-link"
+    >
       <Typography
         as="span"
         variant="body-sm"
@@ -33,7 +36,12 @@ export const Header = () => (
           size="sm"
           variant="secondary"
           rounded
-          render={<Link href="/history" />}
+          render={
+            <Link
+              href="/history"
+              prefetch={false}
+            />
+          }
         >
           <HistoryIcon size={20} />
         </IconButton>
@@ -41,7 +49,12 @@ export const Header = () => (
           size="sm"
           variant="secondary"
           rounded
-          render={<Link href="/profile" />}
+          render={
+            <Link
+              href="/profile"
+              prefetch={false}
+            />
+          }
         >
           <UserIcon size={20} />
         </IconButton>

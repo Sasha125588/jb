@@ -1,11 +1,8 @@
 import { setCookie, useMask } from '@siberiacancode/reactuse'
 import { useForm, useSelector } from '@tanstack/react-form-nextjs'
-import { useParams } from 'next/navigation'
-import { useQueryState } from 'nuqs'
 import { useRef, useState } from 'react'
 
 import { useCreateOtp, useSignIn } from '@/generated/hooks'
-import { useRouter } from '@/lib/i18n'
 import { COOKIES } from '@/shared/constants'
 
 const errorCodes: Record<string, string> = {
@@ -14,10 +11,6 @@ const errorCodes: Record<string, string> = {
 }
 
 export const useLoginPage = () => {
-  const router = useRouter()
-  const { locale } = useParams<{ locale: string }>()
-  const [redirect] = useQueryState('redirect', { defaultValue: '' })
-
   const [step, setStep] = useState<'phone' | 'code'>('phone')
   const [retryDelay, setRetryDelay] = useState<number>(0)
 
@@ -68,7 +61,8 @@ export const useLoginPage = () => {
               sameSite: 'Lax',
             })
 
-            router.replace(redirect || `/${locale}`)
+            const redirect = new URLSearchParams(window.location.search).get('redirect')
+            window.location.replace(redirect || '/')
           },
           onError(error) {
             const reason =

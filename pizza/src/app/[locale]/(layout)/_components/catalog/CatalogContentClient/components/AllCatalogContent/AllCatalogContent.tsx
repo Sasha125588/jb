@@ -14,7 +14,10 @@ export const AllCatalogContent = ({ catalog }: AllCatalogContentProps) => {
   const groupedCatalog = Object.groupBy(catalog, (item) => item.category)
 
   return (
-    <div className="flex flex-1 flex-col gap-12">
+    <div
+      className="flex flex-1 flex-col gap-12"
+      data-testid="catalog-content"
+    >
       {CATALOG_LABELS.map((view) => (
         <section key={view}>
           <Typography
@@ -45,6 +48,7 @@ export const AllCatalogContentSkeleton = () => {
     <div
       aria-hidden="true"
       className="flex flex-1 flex-col gap-6"
+      data-testid="catalog-skeleton"
     >
       {Array.from({ length: SKELETON_SECTION_COUNT }, (_, sectionIndex) => (
         <section key={sectionIndex}>

@@ -21,6 +21,7 @@ export const AuthButtonLogin = () => (
   <Link
     href="/login"
     className={cn(buttonVariants({ size: 'lg' }), buttonStyles)}
+    data-testid="header-login-link"
   >
     <IntlText path="button.login" />
     <LogInIcon />

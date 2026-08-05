@@ -1,16 +1,15 @@
 import { useQueryState } from 'nuqs'
 
-import { ALL_CATALOG_VIEWS } from '../constants'
 import { catalogSearchParams } from '@/app/[locale]/(layout)/_constants'
 
-import type { PizzaCategoryKey } from '@/generated/types/PizzaCategory'
+import type { CatalogView } from '../constants'
 
 export const useCatalogViews = () => {
   const [activeView, setActiveView] = useQueryState('view', catalogSearchParams.view)
 
-  const onViewChange = (view: PizzaCategoryKey) => {
+  const onViewChange = (view: CatalogView) => {
     setActiveView(view)
   }
 
-  return { state: { activeView, views: ALL_CATALOG_VIEWS }, functions: { onViewChange } }
+  return { state: { activeView }, functions: { onViewChange } }
 }

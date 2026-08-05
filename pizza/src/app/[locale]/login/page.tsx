@@ -1,13 +1,7 @@
-import { Suspense } from 'react'
-
 import { LoginPageClient } from './page.client'
 
 const LoginPage = () => {
-  return (
-    <Suspense>
-      <LoginPageClient />
-    </Suspense>
-  )
+  return <LoginPageClient />
 }
 
 export default LoginPage

@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import { Suspense } from 'react'
 
-import { CatalogContent, CatalogSearch, CatalogViews } from './_components/catalog'
+import {
+  CatalogContent,
+  CatalogContentClientSkeleton,
+  CatalogSearch,
+  CatalogViews,
+  CatalogViewsFallback,
+} from './_components/catalog'
 import { Typography } from '@/components/ui'
 import { IntlText } from '@/lib/i18n'
 
@@ -19,7 +25,7 @@ const CatalogPage = ({ searchParams }: CatalogPageProps) => {
         {/* <CatalogFiltersMobile /> */}
       </div>
 
-      <Suspense>
+      <Suspense fallback={<CatalogViewsFallback />}>
         <CatalogViews />
       </Suspense>
 
@@ -27,7 +33,7 @@ const CatalogPage = ({ searchParams }: CatalogPageProps) => {
         <aside className="hidden flex-col gap-6 lg:flex">{/* <CatalogFiltersDesktop /> */}</aside>
 
         <main className="flex justify-between gap-8 pr-10">
-          <Suspense>
+          <Suspense fallback={<CatalogContentClientSkeleton activeView="all" />}>
             <CatalogContent searchParams={searchParams} />
           </Suspense>
           <aside>
@@ -41,6 +47,7 @@ const CatalogPage = ({ searchParams }: CatalogPageProps) => {
             <Image
               src="/assets/images/Banner.png"
               alt="Banner"
+              loading="eager"
               width={272}
               height={365}
             />

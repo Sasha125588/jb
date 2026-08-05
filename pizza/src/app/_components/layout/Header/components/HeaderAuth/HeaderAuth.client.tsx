@@ -5,9 +5,8 @@ import { useSuspenseQuery } from '@tanstack/react-query'
 
 import { AuthButtonLogout } from '../AuthButton/AuthButton'
 import { LogoutConfirmation } from '@/app/[locale]/_components/LogoutConfirmation/LogoutConfirmation'
-import { getProfileQueryKey, getProfileQueryOptions } from '@/generated/hooks'
+import { getProfileQueryKey, getProfileQueryOptions, useSignOut } from '@/generated/hooks'
 import { getQueryClient } from '@/lib'
-import { useRouter } from '@/lib/i18n'
 import { COOKIES } from '@/shared/constants'
 
 interface HeaderAuthClientProps {
@@ -17,7 +16,6 @@ interface HeaderAuthClientProps {
 export const HeaderAuthClient = ({ initialToken }: HeaderAuthClientProps) => {
   const profileResponse = useSuspenseQuery(getProfileQueryOptions({ auth: initialToken }))
 
-  const router = useRouter()
   const confirm = useDisclosure()
   const queryClient = getQueryClient()
 
@@ -25,11 +23,18 @@ export const HeaderAuthClient = ({ initialToken }: HeaderAuthClientProps) => {
     initialValue: initialToken,
   })
 
-  const onLogout = () => {
-    token.remove()
-    queryClient.removeQueries({ queryKey: getProfileQueryKey() })
-    router.replace('/')
-    router.refresh()
+  const signOutMutation = useSignOut({
+    client: { auth: initialToken },
+  })
+
+  const onLogout = async () => {
+    try {
+      await signOutMutation.mutateAsync({ headers: { 'x-application': 'mobile' } })
+    } finally {
+      token.remove({ path: '/' })
+      queryClient.removeQueries({ queryKey: getProfileQueryKey() })
+      window.location.replace('/')
+    }
   }
 
   const user = profileResponse.data.user

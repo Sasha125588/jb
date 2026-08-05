@@ -24,7 +24,8 @@ export default function proxy(request: NextRequest) {
   if (isProtectedRoute && !sessionToken) {
     const loginUrl = new URL(`/${targetLocale}/login`, request.url)
 
-    loginUrl.searchParams.set('redirect', `${request.nextUrl.pathname}${request.nextUrl.search}`)
+    const pathWithoutLocale = `/${pathnameSegments.slice(2).join('/')}`
+    loginUrl.searchParams.set('redirect', `${pathWithoutLocale}${request.nextUrl.search}`)
 
     return NextResponse.redirect(loginUrl)
   }

@@ -31,7 +31,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    ".next-instant/types/**/*.ts",
+    ".next-instant/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules", "generated"]
 }
