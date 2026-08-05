@@ -13,16 +13,6 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
       {children}
       <Footer />
     </div>
-    // <html
-    //   lang={locale}
-    //   className={cn('h-full antialiased', nunito.variable, jetbrainsMono.variable)}
-    //   suppressHydrationWarning
-    // >
-
-    //   <body className="mx-auto flex h-full max-w-7xl flex-col px-4 sm:py-16">
-
-    //   </body>
-    // </html>
   )
 }
 

@@ -14,7 +14,7 @@ export const HeaderAuth = async () => {
 
   const queryClient = getQueryClient()
 
-  queryClient.prefetchQuery(getProfileQueryOptions({ auth: token }))
+  await queryClient.fetchQuery(getProfileQueryOptions({ auth: token }))
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>

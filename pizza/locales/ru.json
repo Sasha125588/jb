@@ -21,6 +21,11 @@
   "page.login.phone.description": "Введите номер телефона для входа в свой профиль",
   "page.login.code.title": "Проверочный код",
   "page.login.code.description": "На указанный вами номер был отправлен проверочный код",
+  "page.catalog.views.all": "Всё меню",
+  "page.catalog.views.pizza": "Пицца",
+  "page.catalog.views.breakfast": "Завтраки",
+  "page.catalog.views.wings": "Крылышки",
+  "page.catalog.views.milkshake": "Милкшейки",
 
   "button.submitPhone": "Продолжить",
   "button.login": "Войти",
@@ -28,6 +33,7 @@
   "button.cancel": "Отменить",
 
   "loading": "Загрузка",
+  "retry": "Повторить",
 
   "modal.logout.title": "Вы уверены, что хотите выйти из профиля?",
 
@@ -37,6 +43,8 @@
   "error.validation.min": "Значение слишком мало",
   "error.invalidCode": "Неправильный отп код",
   "error.default": "Что-то пошло не так",
+  "error.authorization": "Ошибка авторизации",
+  "error.fetch.failed": "Не удалось получить данные",
 
   "field.login.phone.label": "Телефон",
   "field.login.code.label": "Проверочный код"

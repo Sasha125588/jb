@@ -7,6 +7,7 @@ import { ReactQueryDevtoolsPanel } from '@tanstack/react-query-devtools'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 import { ThemeProvider } from '../_contexts'
+import { TooltipProvider } from '@/components/ui/tooltip'
 import { getQueryClient } from '@/lib'
 
 import type { ReactNode } from 'react'
@@ -21,7 +22,9 @@ export const Provider = ({ children }: ProviderProps) => {
   return (
     <NuqsAdapter>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <TooltipProvider>{children}</TooltipProvider>
+        </ThemeProvider>
         <TanStackDevtools
           plugins={[
             { name: 'TanStack Query', render: <ReactQueryDevtoolsPanel /> },

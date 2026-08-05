@@ -24,6 +24,11 @@ declare const messages: {
   'page.login.phone.description': 'Enter your phone number to sign in to your profile'
   'page.login.code.title': 'Verification code'
   'page.login.code.description': 'A verification code has been sent to the provided number'
+  'page.catalog.views.all': 'All'
+  'page.catalog.views.pizza': 'Pizza'
+  'page.catalog.views.breakfast': 'Breakfast'
+  'page.catalog.views.wings': 'Wings'
+  'page.catalog.views.milkshake': 'Milkshakes'
 
   'button.submitPhone': 'Continue'
   'button.login': 'Log in'
@@ -31,6 +36,7 @@ declare const messages: {
   'button.cancel': 'Cancel'
 
   loading: 'Loading'
+  retry: 'Retry'
 
   'modal.logout.title': 'Are you sure you want to log out of your profile?'
 
@@ -40,6 +46,8 @@ declare const messages: {
   'error.validation.min': 'Value is too small'
   'error.invalidCode': 'Invalid otp code'
   'error.default': 'Something went wrong'
+  'error.authorization': 'Authorization error'
+  'error.fetch.failed': 'Failed to fetch data'
 
   'field.login.phone.label': 'Phone number'
   'field.login.code.label': 'Verification code'
