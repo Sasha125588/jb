@@ -22,10 +22,15 @@
   "page.login.code.title": "Код підтвердження",
   "page.login.code.description": "На вказаний вами номер було надіслано код підтвердження",
   "page.catalog.views.all": "Усе меню",
-  "page.catalog.views.pizza": "Піца",
+  "page.catalog.views.pizza": "Піци",
   "page.catalog.views.breakfast": "Сніданки",
   "page.catalog.views.wings": "Крильця",
   "page.catalog.views.milkshake": "Мiлкшейки",
+
+  "pizza.glutenFree": "Без глютену",
+  "pizza.vegetarian": "Веган",
+  "pizza.novelty": "Новинка",
+  "pizza.hit": "Хіт",
 
   "button.submitPhone": "Продовжити",
   "button.login": "Увійти",
@@ -35,7 +40,11 @@
   "loading": "Завантаження",
   "retry": "Повторити",
 
+  "price.from": "від",
+
   "modal.logout.title": "Ви впевнені, що хочете вийти з профілю?",
+
+  "banner.title": "Їж нашу піцу з будь-якої точки світу",
 
   "error.validation.required": "Поле обов’язкове",
   "error.validation.length": "Заповніть поле повністю",

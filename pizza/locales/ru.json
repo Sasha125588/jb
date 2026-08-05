@@ -22,10 +22,15 @@
   "page.login.code.title": "Проверочный код",
   "page.login.code.description": "На указанный вами номер был отправлен проверочный код",
   "page.catalog.views.all": "Всё меню",
-  "page.catalog.views.pizza": "Пицца",
+  "page.catalog.views.pizza": "Пиццы",
   "page.catalog.views.breakfast": "Завтраки",
   "page.catalog.views.wings": "Крылышки",
   "page.catalog.views.milkshake": "Милкшейки",
+
+  "pizza.glutenFree": "Без глютена",
+  "pizza.vegetarian": "Веган",
+  "pizza.novelty": "Новинка",
+  "pizza.hit": "Хит",
 
   "button.submitPhone": "Продолжить",
   "button.login": "Войти",
@@ -35,7 +40,11 @@
   "loading": "Загрузка",
   "retry": "Повторить",
 
+  "price.from": "от",
+
   "modal.logout.title": "Вы уверены, что хотите выйти из профиля?",
+
+  "banner.title": "Кушай нашу пиццу из любой точки мира",
 
   "error.validation.required": "Поле обязательно",
   "error.validation.length": "Заполните поле полностью",

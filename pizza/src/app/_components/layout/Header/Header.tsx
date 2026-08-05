@@ -1,5 +1,4 @@
 import { HistoryIcon, UserIcon } from 'lucide-react'
-import Link from 'next/link'
 import { Suspense } from 'react'
 
 import {
@@ -9,6 +8,7 @@ import {
   LanguageSwitcher,
 } from './components'
 import { IconButton, Typography } from '@/components/ui'
+import { Link } from '@/lib/i18n'
 
 export const Header = () => (
   <header className="flex h-16 items-center justify-between px-4">

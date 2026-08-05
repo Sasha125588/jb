@@ -6,9 +6,13 @@ const nextConfig: NextConfig = {
   /* config options here */
   experimental: {
     useTypeScriptCli: true,
+    turbopackRustReactCompiler: true,
   },
   reactCompiler: true,
   cacheComponents: true,
+  images: {
+    remotePatterns: [{ hostname: 'juniorsbootcamp.ru' }],
+  },
 }
 
 const withNextIntl = createNextIntlPlugin({

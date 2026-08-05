@@ -1,9 +1,8 @@
 import { Loader2Icon, LogInIcon, LogOutIcon } from 'lucide-react'
-import Link from 'next/link'
 
 import { Button, buttonVariants } from '@/components/ui'
 import { cn } from '@/lib'
-import { IntlText } from '@/lib/i18n'
+import { IntlText, Link } from '@/lib/i18n'
 
 const buttonStyles =
   'min-w-25 bg-orange-50 text-orange-600 transition-colors hover:bg-orange-100 dark:bg-orange-900 dark:text-orange-200 dark:hover:bg-orange-800'

@@ -1,10 +1,11 @@
 import { setCookie, useMask } from '@siberiacancode/reactuse'
 import { useForm, useSelector } from '@tanstack/react-form-nextjs'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import { useQueryState } from 'nuqs'
 import { useRef, useState } from 'react'
 
 import { useCreateOtp, useSignIn } from '@/generated/hooks'
+import { useRouter } from '@/lib/i18n'
 import { COOKIES } from '@/shared/constants'
 
 const errorCodes: Record<string, string> = {

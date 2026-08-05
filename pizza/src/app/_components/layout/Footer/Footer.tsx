@@ -1,8 +1,7 @@
-import Link from 'next/link'
-
 import { FOOTER_CONTACTS, FOOTER_PRODUCTS } from './constants'
 import { GithubIcon } from '@/components/icons/brands'
 import { Typography } from '@/components/ui'
+import { Link } from '@/lib/i18n'
 import { IntlText } from '@/lib/i18n/i18n-text'
 
 export const Footer = () => (

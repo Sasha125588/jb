@@ -47,7 +47,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
       <head>
         <ThemeScript />
       </head>
-      <body className="mx-auto flex h-full max-w-7xl flex-col px-4 sm:py-16">
+      <body className="mx-auto flex max-w-7xl flex-col px-4 sm:py-16">
         <NextIntlClientProvider>
           <Provider>
             <ThemeSync />

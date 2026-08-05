@@ -2,12 +2,12 @@
 
 import { useCookie, useDisclosure } from '@siberiacancode/reactuse'
 import { useSuspenseQuery } from '@tanstack/react-query'
-import { useRouter } from 'next/navigation'
 
 import { AuthButtonLogout } from '../AuthButton/AuthButton'
 import { LogoutConfirmation } from '@/app/[locale]/_components/LogoutConfirmation/LogoutConfirmation'
 import { getProfileQueryKey, getProfileQueryOptions } from '@/generated/hooks'
 import { getQueryClient } from '@/lib'
+import { useRouter } from '@/lib/i18n'
 import { COOKIES } from '@/shared/constants'
 
 interface HeaderAuthClientProps {
