@@ -50,6 +50,13 @@
   --color-accent-senary: var(--accent-senary);
   --color-accent-senary-hover: var(--accent-senary-hover);
 
+  --color-pizza-option-ink: var(--pizza-option-ink);
+  --color-pizza-option-yellow: var(--pizza-option-yellow);
+  --color-pizza-option-green: var(--pizza-option-green);
+  --color-pizza-option-pink: var(--pizza-option-pink);
+  --color-pizza-option-blue: var(--pizza-option-blue);
+  --color-pizza-option-violet: var(--pizza-option-violet);
+
   --color-destructive-background: var(--destructive-background);
   --color-destructive-border: var(--destructive-border);
 
@@ -259,6 +266,14 @@
   --accent-senary: var(--color-olive-600);
   --accent-senary-hover: var(--color-olive-500);
 
+  /* Pizza option stickers */
+  --pizza-option-ink: #1b1821;
+  --pizza-option-yellow: #ffd95c;
+  --pizza-option-green: #bfe782;
+  --pizza-option-pink: #f9a7cf;
+  --pizza-option-blue: #a9d8f5;
+  --pizza-option-violet: #c7b8f4;
+
   --destructive: var(--color-red-500);
   --destructive-foreground: var(--color-red-500);
   --destructive-background: var(--color-red-100);
@@ -353,7 +368,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground relative;
   }
   button:not(:disabled),
   [role='button']:not(:disabled) {

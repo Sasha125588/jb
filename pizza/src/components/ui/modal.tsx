@@ -13,15 +13,17 @@ export interface ModalProps {
   description?: ReactNode
   icon?: ReactNode
   title?: ReactNode
+  opened: boolean
   onOpenChange: (value: boolean) => void
 }
 
 export const Modal = ({
   icon,
-  onOpenChange,
   title,
   description,
   children,
+  opened,
+  onOpenChange,
   className,
 }: ModalProps) => {
   const isMobile = useMediaQuery('(max-width: 768px)')
@@ -29,7 +31,7 @@ export const Modal = ({
   if (isMobile) {
     return (
       <Drawer
-        open
+        open={opened}
         onOpenChange={onOpenChange}
       >
         <DrawerContent className={className}>
@@ -60,7 +62,7 @@ export const Modal = ({
 
   return (
     <Dialog
-      open
+      open={opened}
       onOpenChange={onOpenChange}
     >
       <DialogContent className={cn('w-lg', className)}>

@@ -9,6 +9,6 @@ import { userSchema } from './userSchema'
 export const signInResponseSchema = z.object({
   success: z.boolean().describe('Статус запроса'),
   reason: z.string().optional().describe('Причина ошибки'),
-  token: z.string().describe('Токен сессии'),
+  token: z.string().optional().describe('Токен сессии'),
   user: userSchema.describe('Пользователь'),
 })

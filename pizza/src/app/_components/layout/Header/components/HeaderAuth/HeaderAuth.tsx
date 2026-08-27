@@ -14,11 +14,16 @@ export const HeaderAuth = async () => {
 
   const queryClient = getQueryClient()
 
-  await queryClient.fetchQuery(getProfileQueryOptions({ auth: token }))
+  await queryClient.fetchQuery(
+    getProfileQueryOptions({
+      baseURL: 'https://juniorsbootcamp.ru',
+      auth: ({ in: location }) => (location === 'cookie' ? token : undefined),
+    })
+  )
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <HeaderAuthClient initialToken={token} />
+      <HeaderAuthClient />
     </HydrationBoundary>
   )
 }

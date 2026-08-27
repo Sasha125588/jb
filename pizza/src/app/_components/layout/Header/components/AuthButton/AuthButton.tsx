@@ -29,12 +29,12 @@ export const AuthButtonLogin = () => (
 )
 
 interface AuthButtonLogoutProps {
-  onLogout: () => void
+  onClick: () => void
 }
 
-export const AuthButtonLogout = ({ onLogout }: AuthButtonLogoutProps) => (
+export const AuthButtonLogout = ({ onClick }: AuthButtonLogoutProps) => (
   <Button
-    onClick={onLogout}
+    onClick={onClick}
     className={buttonStyles}
   >
     <IntlText path="button.logout" />

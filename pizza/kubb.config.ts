@@ -20,8 +20,8 @@ const stripControllerMacro = ast.defineMacro({
 
 export default defineConfig({
   root: '.',
-  input: 'http://127.0.0.1:3001/api/rest/pizza.json',
-  // input: 'https://juniorsbootcamp.ru/api/rest/pizza.json',
+  // input: 'http://127.0.0.1:3001/api/rest/pizza.json',
+  input: 'https://juniorsbootcamp.ru/api/rest/pizza.json',
   // input: './openapi/pizza.json',
   output: { path: './generated', clean: true },
   plugins: [
@@ -106,7 +106,8 @@ export default defineConfig({
       },
     }),
     pluginFetch({
-      baseURL: 'https://juniorsbootcamp.ru',
+      // oxlint-disable-next-line no-template-curly-in-string
+      baseURL: '${typeof window === "undefined" ? "https://juniorsbootcamp.ru" : "/api"}',
       output: { path: './clients', mode: 'directory', barrel: { type: 'named' } },
       validator: 'zod',
       group: {

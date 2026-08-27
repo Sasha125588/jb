@@ -1,1 +1,1 @@
-export * from './getCachedPizzaCatalogState'
+export * from './getCachedPizzaCatalog'

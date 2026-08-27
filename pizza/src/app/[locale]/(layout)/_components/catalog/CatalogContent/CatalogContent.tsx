@@ -2,13 +2,13 @@ import { HydrationBoundary } from '@tanstack/react-query'
 
 import { loadCatalogSearchParams } from '../../../_lib/nuqs'
 import { CatalogContentClient } from '../CatalogContentClient/CatalogContentClient'
-import { getCachedPizzaCatalogState } from './api'
+import { getCachedPizzaCatalog } from './api'
 
 import type { CatalogPageProps } from '../../../page'
 
 export const CatalogContent = async ({ searchParams }: CatalogPageProps) => {
   const { view } = await loadCatalogSearchParams(searchParams)
-  const dehydratedState = await getCachedPizzaCatalogState(view === 'all' ? undefined : view)
+  const dehydratedState = await getCachedPizzaCatalog(view === 'all' ? undefined : view)
 
   return (
     <HydrationBoundary state={dehydratedState}>

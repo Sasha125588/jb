@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { PizzaCardModal } from './components/PizzaCardModal/PizzaCardModal'
 import { Button, Skeleton, Typography } from '@/components/ui'
 import { IntlText } from '@/lib/i18n'
 
@@ -18,6 +19,8 @@ export const PizzaCard = ({ pizza }: PizzaCardProps) => {
   if (pizza.isNovelty) message = 'pizza.novelty'
   if (pizza.isHit) message = 'pizza.hit'
 
+  const handleClick = () => PizzaCardModal.open({ pizza })
+
   return (
     <article className="group flex h-82 w-50 flex-col justify-between rounded-3xl transition-colors duration-200 ease-in-out hover:bg-orange-500">
       <div>
@@ -34,7 +37,7 @@ export const PizzaCard = ({ pizza }: PizzaCardProps) => {
           )}
 
           <Image
-            src={`https://juniorsbootcamp.ru/api${pizza.img}`}
+            src={`/api/api${pizza.img}`}
             alt={pizza.name}
             width={200}
             height={198}
@@ -48,12 +51,15 @@ export const PizzaCard = ({ pizza }: PizzaCardProps) => {
           {pizza.name}
         </Typography>
       </div>
-      <Button className="hover:bg-background group/button bg-secondary text-foreground mx-2 mb-2 flex items-center justify-between px-5">
+      <Button
+        onClick={handleClick}
+        className="hover:bg-background group/button bg-secondary text-foreground mx-2 mb-2 flex items-center justify-between px-5"
+      >
         <Typography
           as="span"
           variant="caption"
         >
-          <IntlText path="price.from" /> {pizza.sizes[0].price} $
+          <IntlText path="price.from" /> {pizza.sizes[0].price ?? 0} $
         </Typography>
         <span className="text-xl font-semibold transition-transform group-hover/button:rotate-45">
           +

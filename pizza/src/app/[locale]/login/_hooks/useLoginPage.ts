@@ -1,9 +1,10 @@
-import { setCookie, useMask } from '@siberiacancode/reactuse'
+import { useMask } from '@siberiacancode/reactuse'
 import { useForm, useSelector } from '@tanstack/react-form-nextjs'
 import { useRef, useState } from 'react'
 
-import { useCreateOtp, useSignIn } from '@/generated/hooks'
-import { COOKIES } from '@/shared/constants'
+import { ResponseError } from '@/generated/.kubb/client'
+import { getProfileQueryOptions, useCreateOtp, useSignIn } from '@/generated/hooks'
+import { getQueryClient } from '@/lib'
 
 const errorCodes: Record<string, string> = {
   'Неправильный отп код': 'error.invalidCode',
@@ -13,6 +14,8 @@ const errorCodes: Record<string, string> = {
 export const useLoginPage = () => {
   const [step, setStep] = useState<'phone' | 'code'>('phone')
   const [retryDelay, setRetryDelay] = useState<number>(0)
+
+  const queryClient = getQueryClient()
 
   const lastSubmittedPhone = useRef('')
 
@@ -33,50 +36,36 @@ export const useLoginPage = () => {
         return
       }
 
-      signInMutation.mutate(
-        {
-          headers: { 'x-application': 'mobile' },
+      try {
+        await signInMutation.mutateAsync({
           body: {
             phone: value.phone,
             code: value.code,
           },
-        },
-        {
-          onSuccess(data) {
-            if (!data.success) {
-              const message = errorCodes[data.reason ?? 'default']
-              formApi.setErrorMap({
-                onSubmit: {
-                  fields: {
-                    code: { message },
-                  },
-                },
-              })
+        })
 
-              return
-            }
-            setCookie(COOKIES.TOKEN, data.token, {
-              path: '/',
-              secure: true,
-              sameSite: 'Lax',
-            })
+        queryClient.ensureQueryData(getProfileQueryOptions())
 
-            const redirect = new URLSearchParams(window.location.search).get('redirect')
-            window.location.replace(redirect || '/')
-          },
-          onError(error) {
-            const reason =
-              'reason' in error.data && typeof error.data.reason === 'string'
-                ? error.data.reason
-                : 'default'
+        const redirect = new URLSearchParams(window.location.search).get('redirect')
+        window.location.replace(redirect ?? '/')
+      } catch (error) {
+        let message = errorCodes.default
 
-            const message = errorCodes[reason]
-            formApi.setErrorMap({
-              onSubmit: { fields: { code: { message } } },
-            })
-          },
+        if (error instanceof ResponseError) {
+          const reason = error.data.reason
+
+          message = errorCodes[reason] ?? errorCodes.default
         }
-      )
+
+        formApi.setErrorMap({
+          onSubmit: {
+            fields: {
+              code: { message },
+            },
+          },
+        })
+        return
+      }
     },
   })
 

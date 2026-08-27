@@ -41,7 +41,7 @@ const CatalogViewToggleGroup = ({
       <ToggleGroupItem
         key={view}
         className={cn(
-          'bg-secondary h-13 px-4 text-lg font-bold tracking-wide shadow-none transition-colors duration-200',
+          'bg-secondary h-12 px-4 text-lg font-bold tracking-wide shadow-none transition-colors duration-200',
           'data-pressed:bg-foreground data-pressed:text-background'
         )}
         disabled={disabled}
@@ -53,11 +53,9 @@ const CatalogViewToggleGroup = ({
   </ToggleGroup>
 )
 
-export const CatalogViewsFallback = () => {
-  return (
-    <CatalogViewToggleGroup
-      activeView="all"
-      disabled
-    />
-  )
-}
+export const CatalogViewsFallback = () => (
+  <CatalogViewToggleGroup
+    activeView="all"
+    disabled
+  />
+)

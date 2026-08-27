@@ -11,12 +11,21 @@ const nextConfig: NextConfig = {
     exposeTestingApiInProductionBuild: isInstantNavigationTest,
     useTypeScriptCli: true,
     turbopackRustReactCompiler: true,
+    useOffline: true,
   },
   reactCompiler: true,
   cacheComponents: true,
   partialPrefetching: true,
   images: {
     remotePatterns: [{ hostname: 'juniorsbootcamp.ru' }],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://juniorsbootcamp.ru/:path*',
+      },
+    ]
   },
 }
 

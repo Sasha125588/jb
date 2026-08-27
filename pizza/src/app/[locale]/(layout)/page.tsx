@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Suspense } from 'react'
 
 import {
+  CatalogCart,
   CatalogContent,
   CatalogContentClientSkeleton,
   CatalogSearch,
@@ -25,9 +26,14 @@ const CatalogPage = ({ searchParams }: CatalogPageProps) => {
         {/* <CatalogFiltersMobile /> */}
       </div>
 
-      <Suspense fallback={<CatalogViewsFallback />}>
-        <CatalogViews />
-      </Suspense>
+      <div className="flex items-center justify-between">
+        <Suspense fallback={<CatalogViewsFallback />}>
+          <CatalogViews />
+        </Suspense>
+        <Suspense>
+          <CatalogCart />
+        </Suspense>
+      </div>
 
       <div className="grid gap-10  lg:gap-4">
         <aside className="hidden flex-col gap-6 lg:flex">{/* <CatalogFiltersDesktop /> */}</aside>

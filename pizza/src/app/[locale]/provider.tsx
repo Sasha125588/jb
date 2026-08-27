@@ -5,9 +5,10 @@ import { FormDevtoolsPanel } from '@tanstack/react-form-devtools'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtoolsPanel } from '@tanstack/react-query-devtools'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { ModalsProvider } from 'react-modal-minimanager'
 
 import { ThemeProvider } from '../_contexts'
-import { TooltipProvider } from '@/components/ui/tooltip'
+import { TooltipProvider } from '@/components/ui'
 import { getQueryClient } from '@/lib'
 
 import type { ReactNode } from 'react'
@@ -23,7 +24,10 @@ export const Provider = ({ children }: ProviderProps) => {
     <NuqsAdapter>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider>
-          <TooltipProvider>{children}</TooltipProvider>
+          <TooltipProvider>
+            <ModalsProvider />
+            {children}
+          </TooltipProvider>
         </ThemeProvider>
         <TanStackDevtools
           plugins={[

@@ -6,7 +6,7 @@ import { getQueryClient } from '@/lib'
 
 import type { PizzaCategoryKey } from '@/generated/types/PizzaCategory'
 
-export const getCachedPizzaCatalogState = async (category?: PizzaCategoryKey) => {
+export const getCachedPizzaCatalog = async (category?: PizzaCategoryKey) => {
   'use cache'
   cacheLife('hours')
   cacheTag('pizza-catalog')
@@ -14,9 +14,12 @@ export const getCachedPizzaCatalogState = async (category?: PizzaCategoryKey) =>
   const queryClient = getQueryClient()
 
   await queryClient.prefetchQuery(
-    getPizzaCatalogQueryOptions({
-      query: { category },
-    })
+    getPizzaCatalogQueryOptions(
+      {
+        query: { category },
+      },
+      { baseURL: 'https://juniorsbootcamp.ru' }
+    )
   )
 
   return dehydrate(queryClient)

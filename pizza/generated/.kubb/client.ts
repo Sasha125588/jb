@@ -816,4 +816,4 @@ export async function toEventStream<TData = unknown>(result: Promise<{ data: unk
 export const client = createClientCore({ defaultTransport })
 
 export const createClient = (config?: Parameters<typeof client.createClient>[0]) => client.createClient(config)
-client.setConfig({ baseURL: "https://juniorsbootcamp.ru" })
+client.setConfig({ baseURL: typeof window === "undefined" ? "https://juniorsbootcamp.ru" : "/api" })

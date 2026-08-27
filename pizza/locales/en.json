@@ -27,10 +27,59 @@
   "page.catalog.views.wings": "Wings",
   "page.catalog.views.milkshake": "Milkshakes",
 
+  "cart.title": "Cart",
+  "cart.items": "{count, plural, =0 {No items} one {# item} other {# items}}",
+  "cart.edit": "Edit",
+  "cart.remove": "Remove {name}",
+  "cart.decreaseQuantity": "Decrease {name} quantity",
+  "cart.increaseQuantity": "Increase {name} quantity",
+  "cart.delivery": "Delivery",
+  "cart.free": "Free",
+  "cart.checkout": "Proceed to checkout",
+  "cart.close": "Close cart",
+  "cart.empty.title": "Your cart is empty",
+  "cart.empty.description": "Add something from the menu to place an order.",
+  "cart.catalogError": "Could not load the cart items.",
+  "cart.calculationError": "Could not calculate the order total.",
+
   "pizza.glutenFree": "Gluten-Free",
   "pizza.vegetarian": "Vegan",
   "pizza.novelty": "New",
   "pizza.hit": "Hit",
+  "pizza.sizes.small": "Small",
+  "pizza.sizes.medium": "Medium",
+  "pizza.sizes.large": "Large",
+
+  "pizza.crust_thin": "Thin crust",
+  "pizza.crust_thick": "Thick crust",
+  "pizza.crust_cheese": "Cheese crust",
+  "pizza.cream_with": "With cream",
+  "pizza.cream_without": "Without cream",
+  "pizza.options.title": "Make it yours",
+  "pizza.options.description": "Choose one option or leave it as is",
+
+  "pineapple": "Pineapple",
+  "mozzarella": "Mozzarella",
+  "pepperoni": "Pepperoni",
+  "green_pepper": "Green pepper",
+  "mushrooms": "Mushrooms",
+  "basil": "Basil",
+  "cheddar": "Cheddar",
+  "parmesan": "Parmesan",
+  "feta": "Feta",
+  "ham": "Ham",
+  "pickle": "Pickle",
+  "tomato": "Tomato",
+  "bacon": "Bacon",
+  "onion": "Onion",
+  "chile": "Chili pepper",
+  "shrimp": "Shrimp",
+  "chicken_fillet": "Chicken fillet",
+  "meatballs": "Meatballs",
+
+  "addToTaste": "Add to taste",
+  "addToCartWithPrice": "Add for {price}",
+  "updateCartWithPrice": "Save for {price}",
 
   "button.submitPhone": "Continue",
   "button.login": "Log in",
@@ -39,6 +88,8 @@
 
   "loading": "Loading",
   "retry": "Retry",
+
+  "centimeters": "cm",
 
   "price.from": "from",
 
@@ -54,6 +105,7 @@
   "error.default": "Something went wrong",
   "error.authorization": "Authorization error",
   "error.fetch.failed": "Failed to fetch data",
+  "error.user.notFound": "User not found",
 
   "field.login.phone.label": "Phone number",
   "field.login.code.label": "Verification code"

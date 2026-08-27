@@ -1,3 +1,4 @@
+export * from './CatalogCart/CatalogCart'
 export * from './CatalogContent/CatalogContent'
 export * from './CatalogContentClient/CatalogContentClient'
 export * from './CatalogSearch/CatalogSearch'

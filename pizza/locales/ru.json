@@ -27,10 +27,59 @@
   "page.catalog.views.wings": "Крылышки",
   "page.catalog.views.milkshake": "Милкшейки",
 
+  "cart.title": "Корзина",
+  "cart.items": "{count, plural, =0 {Нет товаров} one {# товар} few {# товара} many {# товаров} other {# товара}}",
+  "cart.edit": "Изменить",
+  "cart.remove": "Удалить {name}",
+  "cart.decreaseQuantity": "Уменьшить количество {name}",
+  "cart.increaseQuantity": "Увеличить количество {name}",
+  "cart.delivery": "Доставка",
+  "cart.free": "Бесплатно",
+  "cart.checkout": "Перейти к оформлению заказа",
+  "cart.close": "Закрыть корзину",
+  "cart.empty.title": "Корзина пуста",
+  "cart.empty.description": "Добавьте что-нибудь из меню, чтобы оформить заказ.",
+  "cart.catalogError": "Не удалось загрузить товары корзины.",
+  "cart.calculationError": "Не удалось рассчитать стоимость заказа.",
+
   "pizza.glutenFree": "Без глютена",
   "pizza.vegetarian": "Веган",
   "pizza.novelty": "Новинка",
   "pizza.hit": "Хит",
+  "pizza.sizes.small": "Маленькая",
+  "pizza.sizes.medium": "Средняя",
+  "pizza.sizes.large": "Большая",
+
+  "pizza.crust_thin": "Тонкое тесто",
+  "pizza.crust_thick": "Пышное тесто",
+  "pizza.crust_cheese": "Сырный бортик",
+  "pizza.cream_with": "Со сливками",
+  "pizza.cream_without": "Без сливок",
+  "pizza.options.title": "Сделай по-своему",
+  "pizza.options.description": "Выбери одну опцию или оставь как есть",
+
+  "pineapple": "Ананас",
+  "mozzarella": "Моцарелла",
+  "pepperoni": "Пепперони",
+  "green_pepper": "Зелёный перец",
+  "mushrooms": "Грибы",
+  "basil": "Базилик",
+  "cheddar": "Чеддер",
+  "parmesan": "Пармезан",
+  "feta": "Фета",
+  "ham": "Ветчина",
+  "pickle": "Маринованный огурец",
+  "tomato": "Помидор",
+  "bacon": "Бекон",
+  "onion": "Лук",
+  "chile": "Перец чили",
+  "shrimp": "Креветки",
+  "chicken_fillet": "Куриное филе",
+  "meatballs": "Фрикадельки",
+
+  "addToTaste": "Добавить по вкусу",
+  "addToCartWithPrice": "Добавить за {price}",
+  "updateCartWithPrice": "Сохранить за {price}",
 
   "button.submitPhone": "Продолжить",
   "button.login": "Войти",
@@ -39,6 +88,8 @@
 
   "loading": "Загрузка",
   "retry": "Повторить",
+
+  "centimeters": "см",
 
   "price.from": "от",
 
@@ -54,6 +105,7 @@
   "error.default": "Что-то пошло не так",
   "error.authorization": "Ошибка авторизации",
   "error.fetch.failed": "Не удалось получить данные",
+  "error.user.notFound": "Пользователь не найден",
 
   "field.login.phone.label": "Телефон",
   "field.login.code.label": "Проверочный код"
