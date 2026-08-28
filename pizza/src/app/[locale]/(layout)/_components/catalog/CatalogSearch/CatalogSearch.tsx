@@ -7,6 +7,7 @@
 // import { useModal } from '@/shared/modal'
 
 export const CatalogSearch = () => {
+  // throw new Error('test')
   // const onConfirm = () => console.log('URRAAA')
 
   // const openModal = () => LogoutConfirmationModal.open({ onConfirm })

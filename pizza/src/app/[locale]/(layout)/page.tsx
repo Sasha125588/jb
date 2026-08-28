@@ -51,7 +51,7 @@ const CatalogPage = ({ searchParams }: CatalogPageProps) => {
               <IntlText path="banner.title" />
             </Typography>
             <Image
-              src="/assets/images/Banner.png"
+              src="/assets/images/banner.png"
               alt="Banner"
               loading="eager"
               width={272}

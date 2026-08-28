@@ -5,10 +5,10 @@ import '../globals.css'
 
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale } from 'next-intl/server'
-import { JetBrains_Mono, Nunito } from 'next/font/google'
 import { notFound } from 'next/navigation'
 
 import { ThemeSwitcher, ThemeSync } from '../_components/theme'
+import { jetbrainsMono, nunito } from '../_fonts'
 import { ThemeScript } from '../_scripts'
 import { Provider } from './provider'
 import { cn } from '@/lib'
@@ -17,9 +17,6 @@ import { routing } from '@/lib/i18n/routing'
 
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
-
-const nunito = Nunito({ variable: '--font-nunito', subsets: ['latin'] })
-const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' })
 
 export const metadata: Metadata = {
   title: 'JB Pizza',

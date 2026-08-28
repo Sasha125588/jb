@@ -6,14 +6,12 @@ interface RootLayoutProps extends LayoutProps<'/[locale]'> {
   children: ReactNode
 }
 
-const RootLayout = async ({ children }: RootLayoutProps) => {
-  return (
-    <div>
-      <Header />
-      {children}
-      <Footer />
-    </div>
-  )
-}
+const RootLayout = async ({ children }: RootLayoutProps) => (
+  <>
+    <Header />
+    {children}
+    <Footer />
+  </>
+)
 
 export default RootLayout

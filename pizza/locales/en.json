@@ -15,6 +15,11 @@
   "policy.terms": "Terms of Service",
 
   "button.retryOtp": "Resend code",
+  "button.viewMenu": "View menu",
+  "page.notFound.title": "Oops, this page got lost in production…",
+  "page.notFound.description": "Page not found: it may have been deleted during another merge request, or this endpoint is still under development.",
+  "page.error.title": "Oops… Something went wrong",
+  "page.error.description": "An internal server error occurred. The juniorsbootcamp team is on it and fixing the code. Everything will be working again soon!",
   "page.login.otp.retryCountdown": "{seconds, plural, one {Resend code in # second} other {Resend code in # seconds}}",
 
   "page.login.phone.title": "Log in",
